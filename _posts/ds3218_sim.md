@@ -1,5 +1,10 @@
-DS3218 SERVO MOTOR SIMULATION
------
+---
+layout: post
+title: DS3218 SERVO MOTOR SIMULATION
+category: blog
+description: tttttttttttttt
+---
+
 ## Introduction 
 The main purpose of this project is to simulate the servo motor `DS3218` in Gazebo since the nature of the actuator/controller embeded inside the Gazebo simulator as well as the servo itsef in the real world remain unclear. Thus the project is seperated into three steps. The first stage is the verification of the dynamics of the Gazebo actuator simuator. Typically, the actuator is modeled as a second-order plant. Then, show the same step response in `Matlab` by using the identical parameters(damping and P gain). The second step is to establish the realation between the electrical parameters and mechenical parameters. The last step is to verify the results on the real motor and in the Gazebo simulation.
 
