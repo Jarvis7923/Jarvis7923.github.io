@@ -1,8 +1,8 @@
-title: Shang & Tun
-author: Shang and Tun
-email: Shang.Wang@tufts.edu
+title: Shang's Blog
+author: Shang Wang
+email: shang.wang@tufts.edu
 description: > # this means to ignore newlines until "show_exerpts:"
-  This is an discription
+  I pretend to be a nerd who is addicted to Technics. 
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -14,13 +14,13 @@ minima:
   # generate social links in footer
   social_links:
     # twitter: jekyllrb
-    github:  RuoxiRen
+    github:  Jarvis7923
     # rss: rss
     # dribbble: jekyll
     # facebook: jekyll
     # flickr:   jekyll
     # instagram: jekyll
-    linkedin: ruoxi-ren-884896180
+    linkedin: shang-wang-098b2116a/
     # pinterest: jekyll
     # youtube: jekyll
     # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
@@ -44,13 +44,19 @@ minima:
 collections:
   authors:
     output: true
-
+  categories:
+    output: true
 defaults:
   - scope:
       path: ""
       type: "authors"
     values:
       layout: "author"
+  - scope:
+      path: ""
+      type: "categories"
+    values:
+      layout: "category"
   - scope:
       path: ""
       type: "posts"
@@ -65,13 +71,12 @@ defaults:
 
 header_pages:
   - about.md
-  - test.md
   - staff.html
-
+  - category.html
 
 # Build settings
 theme: minima
 
 plugins:
- - jekyll-feed
+# - jekyll-feed
  - jekyll-seo-tag

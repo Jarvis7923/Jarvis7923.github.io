@@ -1,0 +1,14 @@
+---
+layout: page
+title: Category
+permalink: /category/
+---
+
+<ul>
+  {% for cate in site.categories %}
+    <li>
+      <h2><font size=5><a href="{{ category.url }}">{{ category.name }}</a></font></h2>
+      <p>{{ cate.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
