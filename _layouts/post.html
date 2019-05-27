@@ -13,15 +13,14 @@ layout: default
       <!-- {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
         {%- endif -%}-->
-    {% assign author = site.authors | where: 'short_name', page.author | first %}
-      {% if page.author %}
-        • <a href="{{ author.url }}">{{ page.author }}</a>
+    {% assign project = site.projects | where: 'short_name', page.project | first %}
+      {% if page.project %}
+        • <a href="{{ project.url }}">{{ project.name }}</a>
       {% endif %}
-    {% assign category = site.categories | where: 'name', page.category | first %}
+    {% assign category = site.categories | where: 'short_name', page.category | first %}
       {% if page.category %}
-        - <a href="{{ category.url }}">{{ page.category }}</a>
+        - <a href="{{ category.url }}">{{ category.name }}</a>
       {% endif %}
-  
    </p>
   </header>
 

@@ -42,16 +42,16 @@ minima:
 # - about.md
 
 collections:
-  authors:
+  projects:
     output: true
   categories:
     output: true
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "projects"
     values:
-      layout: "author"
+      layout: "project"
   - scope:
       path: ""
       type: "categories"
@@ -71,8 +71,8 @@ defaults:
 
 header_pages:
   - about.md
-  - staff.html
-  - category.html
+  - Proj.html
+  - Cate.html
 
 # Build settings
 theme: minima

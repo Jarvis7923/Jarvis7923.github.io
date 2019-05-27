@@ -1,0 +1,20 @@
+---
+layout: page
+title: Project
+---
+
+<ul>
+  {% for project in site.projects %}
+    <li>
+      <p style="margin:0px">
+      <font size=5 ><a href="{{ project.url }}">{{ project.name }}</a></font>
+      </p>
+      
+      <p style="margin:0px">
+      <font size=4; style="font-style:italic">{{ project.position }}</font>
+      </p>
+      
+      <p>{{ project.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
