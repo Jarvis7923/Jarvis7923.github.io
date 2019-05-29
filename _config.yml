@@ -71,8 +71,8 @@ defaults:
 
 header_pages:
   - about.md
-  - Proj.html
-  - Cate.html
+  - Project.html
+  - Category.html
 
 # Build settings
 theme: minima

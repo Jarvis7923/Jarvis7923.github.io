@@ -1,12 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-27T11:49:30+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Shang’s Blog</title><subtitle>I pretend to be a nerd who is addicted to Technics. 
-</subtitle><author><name>Shang Wang</name></author><entry><title type="html">B</title><link href="http://localhost:4000/default/2018/08/20/b.html" rel="alternate" type="text/html" title="B" /><published>2018-08-20T00:00:00+08:00</published><updated>2018-08-20T00:00:00+08:00</updated><id>http://localhost:4000/default/2018/08/20/b</id><content type="html" xml:base="http://localhost:4000/default/2018/08/20/b.html">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
-of large herbaceous flowering plants in the genus Musa.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-29T17:52:53+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Shang’s Blog</title><subtitle>I pretend to be a nerd who is addicted to Technics. 
+</subtitle><author><name>Shang Wang</name></author><entry><title type="html">Unable to mount discs</title><link href="http://localhost:4000/ubuntu/2019/05/29/Unable-to-mount-discs.html" rel="alternate" type="text/html" title="Unable to mount discs" /><published>2019-05-29T00:00:00+08:00</published><updated>2019-05-29T00:00:00+08:00</updated><id>http://localhost:4000/ubuntu/2019/05/29/Unable%20to%20mount%20discs</id><content type="html" xml:base="http://localhost:4000/ubuntu/2019/05/29/Unable-to-mount-discs.html">&lt;h2 id=&quot;problem-descriptions&quot;&gt;Problem descriptions&lt;/h2&gt;
+&lt;p&gt;Unable to get access to a different hard disc from Ubuntu.&lt;/p&gt;
 
-&lt;p&gt;In some countries, bananas used for cooking may be called “plantains”,
-distinguishing them from dessert bananas. The fruit is variable in size, color,
-and firmness, but is usually elongated and curved, with soft flesh rich in
-starch covered with a rind, which may be green, yellow, red, purple, or brown
-when ripe.&lt;/p&gt;</content><author><name>Shang Wang</name></author><category term="default" /><summary type="html">A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.</summary></entry><entry><title type="html">Bananas</title><link href="http://localhost:4000/default/2018/08/20/bananas.html" rel="alternate" type="text/html" title="Bananas" /><published>2018-08-20T00:00:00+08:00</published><updated>2018-08-20T00:00:00+08:00</updated><id>http://localhost:4000/default/2018/08/20/bananas</id><content type="html" xml:base="http://localhost:4000/default/2018/08/20/bananas.html">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
+&lt;p&gt;The error looks like:
+&lt;img src=&quot;https://raw.githubusercontent.com/Jarvis7923/pictures/master/Screenshot%20from%202019-05-29%2017-02-32.png&quot; alt=&quot;test&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;environment&quot;&gt;Environment&lt;/h2&gt;
+&lt;p&gt;Ubuntu version, results from command &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo lsb_release -a&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;  Distributor ID: Ubuntu
+&amp;gt;  Description:    Ubuntu 16.04.6 LTS
+&amp;gt;  Release:    16.04
+&amp;gt;  Codename:   xenial
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Kernel version, results from command &lt;code class=&quot;highlighter-rouge&quot;&gt;uname -a&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; 4.15.0-50-generic #54~16.04.1-Ubuntu SMP Wed May 8 15:55:19 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Try command &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo ntfsfix /dev/sda2&lt;/code&gt; 
+in which &lt;code class=&quot;highlighter-rouge&quot;&gt;sda2&lt;/code&gt; is the name of the disc that you want to mount.&lt;/p&gt;
+
+&lt;p&gt;The result looks like:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;  Mounting volume... OK
+&amp;gt;  Processing of $MFT and $MFTMirr completed successfully.
+&amp;gt;  Checking the alternate boot sector... OK
+&amp;gt;  NTFS volume version is 3.1.
+&amp;gt;  NTFS partition /dev/sda2 was processed successfully.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Shang Wang</name></author><category term="ubuntu" /><summary type="html">Problem descriptions Unable to get access to a different hard disc from Ubuntu.</summary></entry><entry><title type="html">Bananas</title><link href="http://localhost:4000/default/2018/08/20/bananas.html" rel="alternate" type="text/html" title="Bananas" /><published>2018-08-20T00:00:00+08:00</published><updated>2018-08-20T00:00:00+08:00</updated><id>http://localhost:4000/default/2018/08/20/bananas</id><content type="html" xml:base="http://localhost:4000/default/2018/08/20/bananas.html">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.&lt;/p&gt;
 
 &lt;p&gt;In some countries, bananas used for cooking may be called “plantains”,

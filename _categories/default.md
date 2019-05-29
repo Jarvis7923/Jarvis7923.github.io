@@ -1,5 +1,5 @@
 ---
-name: Default
+name: Default Category
 short_name: default 
 ---
 

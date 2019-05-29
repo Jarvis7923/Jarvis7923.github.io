@@ -1,0 +1,13 @@
+---
+layout: page
+title: Categories
+---
+
+<ul>
+  {% for category in site.categories %}
+    <li>
+      <h2><font size=5><a href="{{ category.url }}">{{ category.name }}</a></font></h2>
+      <p>{{ category.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
