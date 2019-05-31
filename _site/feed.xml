@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-29T17:52:53+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Shang’s Blog</title><subtitle>I pretend to be a nerd who is addicted to Technics. 
-</subtitle><author><name>Shang Wang</name></author><entry><title type="html">Unable to mount discs</title><link href="http://localhost:4000/ubuntu/2019/05/29/Unable-to-mount-discs.html" rel="alternate" type="text/html" title="Unable to mount discs" /><published>2019-05-29T00:00:00+08:00</published><updated>2019-05-29T00:00:00+08:00</updated><id>http://localhost:4000/ubuntu/2019/05/29/Unable%20to%20mount%20discs</id><content type="html" xml:base="http://localhost:4000/ubuntu/2019/05/29/Unable-to-mount-discs.html">&lt;h2 id=&quot;problem-descriptions&quot;&gt;Problem descriptions&lt;/h2&gt;
-&lt;p&gt;Unable to get access to a different hard disc from Ubuntu.&lt;/p&gt;
-
-&lt;p&gt;The error looks like:
-&lt;img src=&quot;https://raw.githubusercontent.com/Jarvis7923/pictures/master/Screenshot%20from%202019-05-29%2017-02-32.png&quot; alt=&quot;test&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-31T13:59:40+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Shang’s Blog</title><subtitle>I pretend to be a nerd who is addicted to Technics. 
+</subtitle><author><name>Shang Wang</name></author><entry><title type="html">Evoke the system after the lid is closed</title><link href="http://localhost:4000/ubuntu/2019/05/29/Evoke-the-system-after-the-lid-is-closed.html" rel="alternate" type="text/html" title="Evoke the system after the lid is closed" /><published>2019-05-29T00:00:00+08:00</published><updated>2019-05-29T00:00:00+08:00</updated><id>http://localhost:4000/ubuntu/2019/05/29/Evoke%20the%20system%20after%20the%20lid%20is%20closed</id><content type="html" xml:base="http://localhost:4000/ubuntu/2019/05/29/Evoke-the-system-after-the-lid-is-closed.html">&lt;h2 id=&quot;problem-descriptions&quot;&gt;Problem descriptions&lt;/h2&gt;
+&lt;p&gt;The laptop display can not be restarted after closing the lid while the sound works well. In fact, after restarting the laptop-mode several times, it still doesn’t work out. Therefore, I believe it’s time to say goodbye to the hibernation mode of the Ubuntu.&lt;/p&gt;
 
 &lt;h2 id=&quot;environment&quot;&gt;Environment&lt;/h2&gt;
 &lt;p&gt;Ubuntu version, results from command &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo lsb_release -a&lt;/code&gt;:&lt;/p&gt;
@@ -17,16 +14,70 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;p&gt;Try command &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo ntfsfix /dev/sda2&lt;/code&gt; 
-in which &lt;code class=&quot;highlighter-rouge&quot;&gt;sda2&lt;/code&gt; is the name of the disc that you want to mount.&lt;/p&gt;
+&lt;h3 id=&quot;install-laptop-mode-tools&quot;&gt;Install laptop-mode-tools&lt;/h3&gt;
+&lt;p&gt;Run this in the terminal to check the status of package &lt;code class=&quot;highlighter-rouge&quot;&gt;laptop-mode-tools&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dpkg -l | grep laptop-mode-tools
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;if you catch the output like:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ii  laptop-mode-tools    1.68-3ubuntu1    all    Tools for Power Savings based on battery/AC status
+   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Then you already have the package installed, if not, run:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install laptop-mode-tools
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The result looks like:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;  Mounting volume... OK
-&amp;gt;  Processing of $MFT and $MFTMirr completed successfully.
-&amp;gt;  Checking the alternate boot sector... OK
-&amp;gt;  NTFS volume version is 3.1.
-&amp;gt;  NTFS partition /dev/sda2 was processed successfully.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Shang Wang</name></author><category term="ubuntu" /><summary type="html">Problem descriptions Unable to get access to a different hard disc from Ubuntu.</summary></entry><entry><title type="html">Bananas</title><link href="http://localhost:4000/default/2018/08/20/bananas.html" rel="alternate" type="text/html" title="Bananas" /><published>2018-08-20T00:00:00+08:00</published><updated>2018-08-20T00:00:00+08:00</updated><id>http://localhost:4000/default/2018/08/20/bananas</id><content type="html" xml:base="http://localhost:4000/default/2018/08/20/bananas.html">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
+&lt;h3 id=&quot;check-the-status-of-the-laptop-mode&quot;&gt;Check the status of the laptop mode&lt;/h3&gt;
+
+&lt;p&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;cat /proc/sys/vm/laptop_mode&lt;/code&gt; to check if the laptop mode has already activated. ‘0’ means it &lt;em&gt;does not&lt;/em&gt; start, other number means it start.&lt;/p&gt;
+
+&lt;h3 id=&quot;change-the-configuraton&quot;&gt;Change the configuraton&lt;/h3&gt;
+
+&lt;p&gt;Try to change or remove the comment of this line:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ENABLE_LAPTOP_MODE=true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/default/acpi-support&lt;/code&gt;. if you find there is no such line in this file but you get:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Note: to enable &quot;laptop mode&quot; (to spin down your hard drive for longer
+# periods of time), install the laptop-mode-tools package and configure
+# it in /etc/laptop-mode/laptop-mode.conf. 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Then it’s time to change the perspective. Edit &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/laptop-mode/laptop-mode.conf&lt;/code&gt;, change the following lines to true:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ENABLE_LAPTOP_MODE_ON_BATTERY=1
+
+ENABLE_LAPTOP_MODE_ON_AC=1
+
+ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED=1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;After that, restart the laptop node service by &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/init.d/laptop-mode restart&lt;/code&gt;. Check if it has taken effect by &lt;code class=&quot;highlighter-rouge&quot;&gt;cat /proc/sys/vm/laptop_mode&lt;/code&gt; as mentioned before,&lt;/p&gt;
+
+&lt;p&gt;Most of the blogs said that you can restart your laptop and try to close your lid and check if the system can be evoked.&lt;/p&gt;
+
+&lt;p&gt;But unfortuately, I myself didn’t take the advange of this workaround. So if you still want to see your lovely graphic interface after you close the lid, prohibit the hibernation functionality once and for all.&lt;/p&gt;
+
+&lt;h3 id=&quot;close-the-hibernation&quot;&gt;Close the hibernation&lt;/h3&gt;
+&lt;p&gt;Check the systme config file&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;grep -r HandleLidSwitch /etc/systemd/logind.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Change the config file&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo sed -i 's/#HandleLidSwitch=suspend/HandleLidSwitch=ignore/g' /etc/systemd/logind.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;and restart the service&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl restart systemd-logind.service
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Then feel free to try closing the lid. At least it works for my laptop.&lt;/p&gt;</content><author><name>Shang Wang</name></author><category term="ubuntu" /><summary type="html">Problem descriptions The laptop display can not be restarted after closing the lid while the sound works well. In fact, after restarting the laptop-mode several times, it still doesn’t work out. Therefore, I believe it’s time to say goodbye to the hibernation mode of the Ubuntu.</summary></entry><entry><title type="html">Mouse fails occasionally</title><link href="http://localhost:4000/ubuntu/2019/05/29/Mouse-fails-occasionally.html" rel="alternate" type="text/html" title="Mouse fails occasionally" /><published>2019-05-29T00:00:00+08:00</published><updated>2019-05-29T00:00:00+08:00</updated><id>http://localhost:4000/ubuntu/2019/05/29/Mouse%20fails%20occasionally</id><content type="html" xml:base="http://localhost:4000/ubuntu/2019/05/29/Mouse-fails-occasionally.html">&lt;h2 id=&quot;problem-descriptions&quot;&gt;Problem descriptions&lt;/h2&gt;
+&lt;p&gt;The mouse occasionally fails after reboot. Actually, it’s more like the mouse is suspended or asleep if it is not used for several seconds.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;h3 id=&quot;work-around-1&quot;&gt;Work around 1&lt;/h3&gt;
+&lt;p&gt;Unplug the mouse and reconnect every time after reboot.&lt;/p&gt;
+
+&lt;h3 id=&quot;change-the-laptop-mode-configuration&quot;&gt;Change the laptop-mode configuration&lt;/h3&gt;
+&lt;p&gt;Edit &lt;code class=&quot;highlighter-rouge&quot;&gt;runtime-pm.config&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vi /etc/laptop-mode/conf.d/runtime-pm.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Close the autosuspend, set:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CONTROL_RUNTIME_AUTOSUSPEND = 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Then restart the computer.&lt;/p&gt;</content><author><name>Shang Wang</name></author><category term="ubuntu" /><summary type="html">Problem descriptions The mouse occasionally fails after reboot. Actually, it’s more like the mouse is suspended or asleep if it is not used for several seconds.</summary></entry><entry><title type="html">Bananas</title><link href="http://localhost:4000/default/2018/08/20/bananas.html" rel="alternate" type="text/html" title="Bananas" /><published>2018-08-20T00:00:00+08:00</published><updated>2018-08-20T00:00:00+08:00</updated><id>http://localhost:4000/default/2018/08/20/bananas</id><content type="html" xml:base="http://localhost:4000/default/2018/08/20/bananas.html">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.&lt;/p&gt;
 
 &lt;p&gt;In some countries, bananas used for cooking may be called “plantains”,
