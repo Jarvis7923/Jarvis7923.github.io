@@ -1,6 +1,5 @@
 ---
 layout: post
-project: default
 category: ubuntu
 ---
 ## Problem descriptions     

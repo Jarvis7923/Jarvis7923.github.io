@@ -3,4 +3,5 @@ short_name: biped
 name: Biped Robot
 position: CEEO at Tufts University
 ---
-descriptions
+The project website is: [Github](https://github.com/Jarvis7923?tab=projects)
+
